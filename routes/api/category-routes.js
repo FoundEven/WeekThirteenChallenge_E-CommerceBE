@@ -39,26 +39,36 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
-});
-
-router.delete('/:id', async (req, res) => {
-  // delete a category by its `id` value
-  try {
-    const readerData = await Reader.destroy({
+  Category.update(
+    {
+      // All the fields you can update and the data attached to the request body.
+      category_name: req.body.category_name,
+    },
+    {
+      // Gets the books based on the isbn given in the request parameters
       where: {
         id: req.params.id,
       },
-    });
-
-    if (!readerData) {
-      res.status(404).json({ message: 'No reader found with that id!' });
-      return;
     }
+  )
+    .then((updatedCata) => {
+      // Sends the updated book as a json response
+      res.json(updatedCata);
+    })
+    .catch((err) => res.json(err));
+});
 
-    res.status(200).json(readerData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
+router.delete('/:id', (req, res) => {
+  // delete a category by its `id` value
+  Category.destroy({
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then((deletedCata) => {
+      res.json(deletedCata);
+    })
+    .catch((err) => res.json(err));
 });
 
 module.exports = router;
