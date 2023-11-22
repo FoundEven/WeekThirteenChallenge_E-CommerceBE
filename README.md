@@ -14,8 +14,8 @@ You will need to install sequelize
 
 ## Usage
 
-To run the application in your terminal you have to use node index.js. Then you will need to answer the prompts given to you.
+To run the application in your terminal you have to use node server.js. Then you will need to use Insomnia to call the routes for each section.
 
 Link to walkthrough video: ()
 
-Link to my repository: ()
+Link to my repository: (https://github.com/FoundEven/WeekThirteenChallenge_E-CommerceBE)
