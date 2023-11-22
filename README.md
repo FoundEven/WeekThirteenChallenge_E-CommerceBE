@@ -6,16 +6,17 @@ My motivation for making this project was to make a porject using sequelize. I b
 
 ## Installation
 
-You will need to install node
-You will need to install Insomnia
-You will need to install express
-You will need to install mysql2
-You will need to install sequelize
+You will need to install node.
+You will need to install Insomnia.
+You will need to install express.
+You will need to install mysql2.
+You will need to install sequelize.
+You will need to install dotenv.
 
 ## Usage
 
 To run the application in your terminal you have to use node server.js. Then you will need to use Insomnia to call the routes for each section.
 
-Link to walkthrough video: ()
+Link to walkthrough video: (https://drive.google.com/file/d/1b8cDdlpZocsBxuoJycwqEhNBqR8ODQP5/view?usp=sharing)
 
 Link to my repository: (https://github.com/FoundEven/WeekThirteenChallenge_E-CommerceBE)
